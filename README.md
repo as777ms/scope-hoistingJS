@@ -83,3 +83,53 @@ const c = 5;
 
 <h2 style="color:yellow">Введение в JavaScript SCOPE</2>
 <h6 style="color:brown">scope in oblast vidimosti dar JS meboshad</h6>
+
+
+* Область видимости или Scope
+* Глобальная область видимости или Global Scope
+* Локальная область видимости или Local Scope
+* Область видимости функции
+* Область видимости блока
+* Лексическая область видимости
+* Динамическая область видимости
+
+``` diff
+-Область видимости (scope) определяет видимость или доступность переменной (другого ресурса) в области твоего кода.
+```
+```js
+
+var num = 5;
+console.log(num);   // 5
+
+function getNum(){
+  console.log(num); // num доступен здесь
+}
+
+getNum();           // 5 i chiz faqat var da mumkinai digaroda ne⬆️
+```
+ 
+
+# ⬆️   i GLOBAL SCOPE ai 
+
+#### local scope peremennixoi daruni function a megan `local ni oblast megan ujara xar yak function oblast vidimosti xcha dora` ``Одна и та же переменная может использоваться в разных функциях, поскольку они связаны с соответствующими функциями и не являются взаимно видимыми.`yak peremenira dar chand funtion istifoda burda meshiday`
+
+
+``` js
+// Глобальная область
+
+function foo1(){
+    // Локальная область 1
+  function foo2(){
+    // Локальная область 2
+  }
+}
+
+// Глобальная область
+function foo3(){
+  // Локальная область 3
+}
+
+// Глобальная область
+```
+
+## Локальная область видимости может быть разделена на область видимости функции и область видимости блока. Концепция область видимости блока или block scope была представлена в ECMAScript6 (ES6) вместе с новыми способами объявления переменных - const и let.
