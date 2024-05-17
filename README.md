@@ -153,4 +153,3 @@ function foo(){
 foo();                   // inside function: 10
 console.log(num);       // ReferenceError: num is not defined
 ```
-
