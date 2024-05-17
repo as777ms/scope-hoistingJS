@@ -111,6 +111,13 @@ getNum();           // 5 i chiz faqat var da mumkinai digaroda ne⬆️
 
 # ⬆️   i GLOBAL SCOPE ai 
 
+
+#### dar js mo dorem
+# module scope
+# block scope
+# function scope
+# global scope 
+
 #### local scope peremennixoi daruni function a megan `local ni oblast megan ujara xar yak function oblast vidimosti xcha dora` ``Одна и та же переменная может использоваться в разных функциях, поскольку они связаны с соответствующими функциями и не являются взаимно видимыми.`yak peremenira dar chand funtion istifoda burda meshiday`
 
 
@@ -132,4 +139,18 @@ function foo3(){
 // Глобальная область
 ```
 
-## Локальная область видимости может быть разделена на область видимости функции и область видимости блока. Концепция область видимости блока или block scope была представлена в ECMAScript6 (ES6) вместе с новыми способами объявления переменных - const и let.
+>Локальная область видимости может быть разделена на область видимости функции и область видимости блока. Концепция область видимости блока или block scope была представлена в ECMAScript6 (ES6) вместе с новыми способами объявления переменных - const и let.
+
+# Область видимости функции
+> var a function scope am megan baroi on ki var lyuboijo rafta metona lekin var-a tolko function qapida metona
+
+``` js
+function foo(){
+  var num = 10;
+  console.log('inside function: ', num);
+}
+
+foo();                   // inside function: 10
+console.log(num);       // ReferenceError: num is not defined
+```
+
